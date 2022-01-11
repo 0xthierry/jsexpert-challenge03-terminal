@@ -1,12 +1,12 @@
 import { describe, it, before } from 'mocha';
 import { expect } from 'chai';
-import { incomeRepositoryMock, mocks } from '../mocks/incomeRepository.mock.js';
+import { conversionRepositoryMock, mocks } from '../mocks/conversionRepository.mock.js';
 
-describe('IncomeRepository Suite Tests', () => {
+describe('conversionRepository Suite Tests', () => {
   let repository = {};
 
   before(() => {
-    repository = incomeRepositoryMock;
+    repository = conversionRepositoryMock;
   });
 
   it('should return the correct list of conversions when getConversions is called', async () => {

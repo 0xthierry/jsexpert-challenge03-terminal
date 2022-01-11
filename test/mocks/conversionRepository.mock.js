@@ -1,4 +1,4 @@
-import IncomeRepository from '../../src/repository/IncomeRepository.js';
+import conversionRepository from '../../src/repository/ConversionRepository.js';
 import sinon from 'sinon';
 import convertResponseMock from './convert-response.js';
 import validIncomeMock from './valid-income.js';
@@ -12,13 +12,13 @@ const mocks = {
   validIncome: validIncomeMock,
 };
 
-const incomeRepositoryMock = new IncomeRepository();
+const conversionRepositoryMock = new conversionRepository();
 
 const stub = sinon.stub(
-  incomeRepositoryMock,
-  incomeRepositoryMock.makeRequest.name
+  conversionRepositoryMock,
+  conversionRepositoryMock.makeRequest.name
 );
 
 stub.withArgs(urls.convert).resolves(mocks.convertResponse);
 
-export { incomeRepositoryMock, urls, mocks };
+export { conversionRepositoryMock, urls, mocks };

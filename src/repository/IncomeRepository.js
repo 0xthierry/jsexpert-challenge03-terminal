@@ -1,16 +1,19 @@
-import http from 'http';
+import Request from "../lib/request.js";
 
-const API_BASE_URL = 'http://localhost:3000';
+const API_BASE_URL = "http://localhost:3000";
 
 class IncomeRepository {
-  async makeRequest(url) {
-    // @TODO: Implement method
-    return null;
+  constructor() {
+    this.incomeClient = new Request();
   }
 
-  async getConversions() {
-    // @TODO: Implement method
-    return null;
+  async getIncomes() {
+    const { data } = await this.incomeClient.get(`${API_BASE_URL}/incomes`);
+    return data;
+  }
+
+  async saveIncome(income) {
+    await this.incomeClient.post(`${API_BASE_URL}/incomes`, income);
   }
 }
 

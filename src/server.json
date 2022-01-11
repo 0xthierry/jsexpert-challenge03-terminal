@@ -1,28 +1,150 @@
 {
-  "incomes": [{
-    "id": 1,
-    "position": "Senior Javascript Engineer", 
-    "expectation": {
-      "currency": "BRL",
-      "language": "pt-BR",
-      "value": 15000
-    }, 
-    "conversion01": {
-      "currency": "USD",
-      "language": "en-US",
-      "value": 2610.8
-    }, 
-    "conversion02": {
-      "currency": "EUR",
-      "language": "en-GB",
-      "value": 2315.13
-    }, 
-    "conversion03": {
-      "currency": "RUB",
-      "language": "ru-RU",
-      "value": 193051.70
+  "incomes": [
+    {
+      "id": 1,
+      "position": "Senior Javascript Engineer",
+      "expectation": {
+        "currency": "BRL",
+        "language": "pt-BR",
+        "value": 15000
+      },
+      "conversion01": {
+        "currency": "USD",
+        "language": "en-US",
+        "value": 2610.8
+      },
+      "conversion02": {
+        "currency": "EUR",
+        "language": "en-GB",
+        "value": 2315.13
+      },
+      "conversion03": {
+        "currency": "RUB",
+        "language": "ru-RU",
+        "value": 193051.7
+      }
+    },
+    {
+      "position": "Senior Javascript Engineer",
+      "expectation": {
+        "value": 15000,
+        "currency": "BRL",
+        "language": "pt-BR"
+      },
+      "conversion01": {
+        "value": 2610.87,
+        "currency": "USD",
+        "language": "en-US"
+      },
+      "conversion02": {
+        "value": 2315.13,
+        "currency": "EUR",
+        "language": "en-GB"
+      },
+      "conversion03": {
+        "value": 193051.695,
+        "currency": "RUB",
+        "language": "ru-RU"
+      },
+      "id": 2
+    },
+    {
+      "position": "Senior Javascript Engineer",
+      "expectation": {
+        "value": 15000,
+        "currency": "BRL",
+        "language": "pt-BR"
+      },
+      "conversion01": {
+        "value": 2610.87,
+        "currency": "USD",
+        "language": "en-US"
+      },
+      "conversion02": {
+        "value": 2315.13,
+        "currency": "EUR",
+        "language": "en-GB"
+      },
+      "conversion03": {
+        "value": 193051.695,
+        "currency": "RUB",
+        "language": "ru-RU"
+      },
+      "id": 3
+    },
+    {
+      "position": "Senior Javascript Engineer",
+      "expectation": {
+        "value": 15000,
+        "currency": "BRL",
+        "language": "pt-BR"
+      },
+      "conversion01": {
+        "value": 2610.87,
+        "currency": "USD",
+        "language": "en-US"
+      },
+      "conversion02": {
+        "value": 2315.13,
+        "currency": "EUR",
+        "language": "en-GB"
+      },
+      "conversion03": {
+        "value": 193051.695,
+        "currency": "RUB",
+        "language": "ru-RU"
+      },
+      "id": 4
+    },
+    {
+      "position": "Senior Javascript Engineer",
+      "expectation": {
+        "value": 15000,
+        "currency": "BRL",
+        "language": "pt-BR"
+      },
+      "conversion01": {
+        "value": 2610.87,
+        "currency": "USD",
+        "language": "en-US"
+      },
+      "conversion02": {
+        "value": 2315.13,
+        "currency": "EUR",
+        "language": "en-GB"
+      },
+      "conversion03": {
+        "value": 193051.695,
+        "currency": "RUB",
+        "language": "ru-RU"
+      },
+      "id": 5
+    },
+    {
+      "position": "Senior Javascript Engineer",
+      "expectation": {
+        "value": 18000,
+        "currency": "BRL",
+        "language": "pt-BR"
+      },
+      "conversion01": {
+        "value": 3133.044,
+        "currency": "USD",
+        "language": "en-US"
+      },
+      "conversion02": {
+        "value": 2778.156,
+        "currency": "EUR",
+        "language": "en-GB"
+      },
+      "conversion03": {
+        "value": 231662.03399999999,
+        "currency": "RUB",
+        "language": "ru-RU"
+      },
+      "id": 6
     }
-  }],
+  ],
   "convert": {
     "query": {
       "base_currency": "BRL",

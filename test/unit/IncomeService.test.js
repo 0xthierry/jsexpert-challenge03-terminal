@@ -1,36 +1,36 @@
-import { describe, it, before } from 'mocha';
-import { expect } from 'chai';
-import { incomeRepositoryMock, mocks } from '../mocks/incomeRepository.mock.js';
+import { describe, it, before } from "mocha";
+import { expect } from "chai";
+import { conversionRepositoryMock, mocks } from "../mocks/conversionRepository.mock.js";
 
-import IncomeService from '../../src/service/IncomeService.js';
+import IncomeService from "../../src/service/IncomeService.js";
 
-describe('IncomeService Suite Tests', () => {
+describe("IncomeService Suite Tests", () => {
   let service = {};
   let repository = {};
 
   before(() => {
-    repository = incomeRepositoryMock;
-    service = new IncomeService({ incomeRepository: repository });
+    repository = conversionRepositoryMock;
+    service = new IncomeService({ conversionRepository: repository });
   });
 
-  it('should successfully return an income instance given a correct string', async () => {
+  it("should successfully return an income instance given a correct string", async () => {
     const expected = mocks.validIncome;
 
     const income = await service.generateIncomeFromString(
-      'Senior Javascript Engineer; 15000'
+      "Senior Javascript Engineer; 15000"
     );
 
     expect(income).to.be.deep.equal(expected);
   });
 
-  it('should return an error when generating an income instance from empty string', async () => {
+  it("should return an error when generating an income instance from empty string", async () => {
     const expectedErrorMessage =
-      'Position is a required field. Please make sure you are providing a position.';
+      "Position is a required field. Please make sure you are providing a position.";
 
     let errorMessage = null;
 
     try {
-      await service.generateIncomeFromString('');
+      await service.generateIncomeFromString("");
     } catch (error) {
       errorMessage = error.message;
     }

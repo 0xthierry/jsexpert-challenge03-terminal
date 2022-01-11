@@ -1,21 +1,33 @@
-import CustomTerminal from './terminal.js';
-import IncomeService from './service/IncomeService.js';
+import CustomTerminal from "./terminal.js";
+import IncomeService from "./service/IncomeService.js";
 
 const VOCABULARY = {
-  STOP: ':q',
+  STOP: ":q",
 };
 
 const terminal = new CustomTerminal();
-terminal.initialize();
-
 const service = new IncomeService();
+const incomes = await service.getIncomes();
+
+terminal.initialize(incomes);
 
 async function mainLoop() {
-  console.info('🚀 Running...\n');
+  console.info("🚀 Running...\n");
   try {
-    // TODO: Looks like you have some work to do right here :)
+    const answer = await terminal.question();
+
+    if (answer === VOCABULARY.STOP) {
+      terminal.closeTerminal();
+      return;
+    }
+
+    const result = await service.generateIncomeFromString(answer);
+    terminal.updateTable(result.format());
+    await service.saveIncome(result);
+
+    return mainLoop();
   } catch (error) {
-    // TODO: Don't forget of handling some errors beautifully ;)
+    console.error("deu ruim", error);
   }
   return mainLoop();
 }

@@ -74,7 +74,7 @@ project
 │   │   │   Income.js    
 │   │
 │   └───repository
-│   │   │   IncomeRepository.js    
+│   │   │   conversionRepository.js    
 │   │  
 │   └───service
 │   │   │   IncomeService.js    
@@ -83,11 +83,11 @@ project
 │   │  
 │   └───mocks
 │   │   │   convert-response.js 
-│   │   │   incomeRepository.mock.js 
+│   │   │   conversionRepository.mock.js 
 │   │   │   valid-income.js 
 │   │  
 │   └───unit
-│   │   │   IncomeRepository.test.js 
+│   │   │   conversionRepository.test.js 
 │   │   │   IncomeService.test.js     
 │         
 ```
@@ -98,7 +98,7 @@ project
 
 * [ ] Deve implementar a internacionalização no arquivo `entity/Income.js`
 
-* [ ] Deve implementar os métodos existentes em `repository/IncomeRepository`, assegurando que os testes em `IncomeRepository.test.js` estejam funcionando.
+* [ ] Deve implementar os métodos existentes em `repository/conversionRepository`, assegurando que os testes em `conversionRepository.test.js` estejam funcionando.
 
 * [ ] Deve implementar os métodos existentes em `service/IncomeService.js`, assegurando que os testes em `IncomeService.test.js` estejam funcionando.
 
